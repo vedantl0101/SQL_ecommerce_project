@@ -889,4 +889,5 @@ Tableau public for Visualization
 
 **Kaggle and Olist:**
 For providing the Olist E-commerce dataset, which served as the foundation for this analysis. The dataset, made available on Kaggle, was instrumental in conducting this research. Special thanks to Olist for compiling and sharing such a comprehensive and valuable dataset.#   S Q L _ e c o m m e r c e _ p r o j e c t  
+ #   S Q L _ e c o m m e r c e _ p r o j e c t  
  
