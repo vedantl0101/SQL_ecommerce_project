@@ -315,7 +315,7 @@ group by customer_city
 order by number_customers DESC
 limit 10;
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_ca1/CA1?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
+
 
 ![Customer Distribution by City](/Images/sql_olist_ca1.png)
 
@@ -332,7 +332,7 @@ group by customer_state
 order by number_customers DESC
 limit 10;
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_ca2/Sheet2?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
+
 
 ![Customer Distribution by State](/Images/sql_olist_ca2.png)
 
@@ -354,7 +354,7 @@ from topcities_cust
 where row_num<=10
 ORDER BY customer_state, number_customers desc;
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_ca3/sql_olist_ca3?:language=en-US&publish=yes&:sid=DDB1BB01944B494EAEF994CEE9CE8F20-0:0&:display_count=n&:origin=viz_share_link)
+
 
 ![Customer Distribution by State and City](/Images/sql_olist_ca3.png)
 
@@ -372,7 +372,7 @@ group by seller_city
 order by number_sellers DESC
 limit 10;
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_ca4/sql_olist-ca4?:language=en-US&publish=yes&:sid=59EF1F11C9604755A2F66995E7F82922-0:0&:display_count=n&:origin=viz_share_link)
+tion [Link](https://public.tableau.com/views/Sql_olist_ca4/sql_olist-ca4?:language=en-US&publish=yes&:sid=59EF1F11C9604755A2F66995E7F82922-0:0&:display_count=n&:origin=viz_share_link)
 
 ![Customer Distribution by State and City](/Images/sql_olist_ca4.png)
 
@@ -390,7 +390,6 @@ group by seller_state
 order by number_sellers DESC
 limit 10;
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_ca5/sql_olist_ca5?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
 
 ![Customer Distribution by State and City](/Images/sql_olist_ca5.png)
 
@@ -413,7 +412,7 @@ where row_num<=10
 ORDER BY seller_state, number_sellers desc;
 
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_ca6/sql_olist_ca6?:language=en-US&publish=yes&:sid=AF79A65D9BFA478B85589D8C110B0834-0:0&:display_count=n&:origin=viz_share_link)
+
 
 ![Customer Distribution by State and City](/Images/sql_olist_ca6.png)
 
@@ -588,7 +587,7 @@ select review_score, star_ratings, (star_ratings::float / total) * 100 as percen
 from starrating, total;
 ```
 
-Visualization [Link](https://public.tableau.com/views/Sql_olist_dra5/sql_olist_dra5?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
+
 
 ![Rating Analysis](/Images/sql_olist_dra5.png)
 
@@ -745,7 +744,7 @@ from exppd join olist_product_name_translation nt
 on exppd.product_category_name = nt.product_category_name
 order by avg_price desc;
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_sra1/sql_olist_sra1?:language=en-US&publish=yes&:sid=A25C7CE7FFA24CFB925B32F0BB0DD354-0:0&:display_count=n&:origin=viz_share_link)
+
 
 ![Most Expensive Category](/Images/sql_olist_sra1.png)
 
@@ -766,7 +765,7 @@ from chpd join olist_product_name_translation nt
 on chpd.product_category_name = nt.product_category_name
 order by avg_price asc;
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_sra1_2/sql_olist_sra1_2?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
+
 
 ![Least Expensive Category](/Images/sql_olist_sra1.2.png)
 
@@ -788,7 +787,7 @@ from products_ordered po join olist_product_name_translation nt
 on po.product_category_name = nt.product_category_name
 order by po.productord desc
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_sra2/sql_olist_sra2?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
+
 
 ![TOP 10 PRODUCTS](/Images/sql_olist_sra2.png)
 
@@ -810,7 +809,7 @@ from olist_order_payments
 select payment_installments, num, (num :: float / tot) * 100 as percentage
 from num_count, total
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_sra4/sql_olist_sra4?:language=en-US&publish=yes&:sid=7E3EF5692A8646BDB37F44258913749D-0:0&:display_count=n&:origin=viz_share_link)
+
 ![Payment Installment Distribution](/Images/sql_olist_sra4.png)
 
 **5. Find the total orders yearly and monthly?**
@@ -819,8 +818,7 @@ select  extract(month from order_purchase_timestamp) as month, extract(year from
 from olist_orders
 group by  year, month
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_sra5/sql_olist_sra5?:language=en-US&publish=yes&:sid=D9F43BE037DE44A791065067CF1D7E16-0:0&:display_count=n&:origin=viz_share_link)
-![YEARLY AND MONTHLY ORDER SALES](/Images/sql_olist_sra5.png)
+
 
 For yearly and monthkly seperate analysis refer to [SQL FILE](/EDA_Olist_SQL/Sales&Revenue_analysis.sql)
 
@@ -833,7 +831,7 @@ from olist_order_payments op join olist_orders o
 on op.order_id = o.order_id
 group by year, month
 ```
-Visualization [Link](https://public.tableau.com/views/Sql_olist_sra6/sql_olist_sra6?:language=en-US&publish=yes&:sid=A776E2BC34D44D6AAA0E79137B8CF4F4-0:0&:display_count=n&:origin=viz_share_link)
+
 ![YEARLY AND MONTHLY ORDER SALES](/Images/sql_olist_sra6.png)
 
 For yearly and monthkly seperate analysis refer to [SQL FILE](/EDA_Olist_SQL/Sales&Revenue_analysis.sql)
@@ -888,6 +886,4 @@ Tableau public for Visualization
 ## **Acknowledgements**
 
 **Kaggle and Olist:**
-For providing the Olist E-commerce dataset, which served as the foundation for this analysis. The dataset, made available on Kaggle, was instrumental in conducting this research. Special thanks to Olist for compiling and sharing such a comprehensive and valuable dataset.#   S Q L _ e c o m m e r c e _ p r o j e c t  
- #   S Q L _ e c o m m e r c e _ p r o j e c t  
- 
+For providing the Olist E-commerce dataset, which served as the foundation for this analysis. The dataset, made available on Kaggle, was instrumental in conducting this research.
