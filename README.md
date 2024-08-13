@@ -80,7 +80,7 @@ To import data I used the follwing code:
 
 ```sql
 copy public.olist_geolocation
-from '/Users/parmeetsingh/developer/SQL_ecommerceProject/Olist_Dataset/olist_geolocation_dataset.csv'
+from 'D:/Coding/SQL_ecommerceProject/Olist_Dataset/olist_geolocation_dataset.csv'
 WITH (FORMAT csv, HEADER true, delimiter ',', encoding 'UTF8');
 ```
 #### **Table Olist_Customers** 
@@ -101,7 +101,7 @@ create table public.olist_Customers
 
 
 copy public.olist_Customers
-from '/Users/parmeetsingh/developer/SQL_ecommerceProject/Olist_Dataset/olist_customers_dataset.csv'
+from 'D:/Coding/SQL_ecommerceProject/Olist_Dataset/olist_customers_dataset.csv'
 WITH (FORMAT csv, HEADER true, delimiter ',', encoding 'UTF8');
 ```
 
@@ -122,7 +122,7 @@ create table public.Olist_seller
 );
 
 copy public.Olist_seller
-from '/Users/parmeetsingh/developer/SQL_ecommerceProject/Olist_Dataset/olist_sellers_dataset.csv'
+from 'D:/Coding/SQL_ecommerceProject/Olist_Dataset/olist_sellers_dataset.csv'
 WITH (FORMAT csv, HEADER true, delimiter ',', encoding 'UTF8');
 ```
 ### ***Table Olist_Order***
@@ -147,7 +147,7 @@ create table public.olist_orders
 );
 
 copy public.olist_orders
-from '/Users/parmeetsingh/developer/SQL_ecommerceProject/Olist_Dataset/olist_orders_dataset.csv'
+from 'D:/Coding/SQL_ecommerceProject/Olist_Dataset/olist_orders_dataset.csv'
 WITH (FORMAT csv, HEADER true, delimiter ',', encoding 'UTF8');
 
 ```
@@ -171,7 +171,7 @@ create table public.olist_order_reviews
 )
 
 copy public.olist_order_reviews
-from '/Users/parmeetsingh/developer/SQL_ecommerceProject/Olist_Dataset/olist_order_reviews_dataset.csv'
+from 'D:/Coding/SQL_ecommerceProject/Olist_Dataset/olist_order_reviews_dataset.csv'
 WITH (FORMAT csv, HEADER true, delimiter ',', encoding 'UTF8');
 ```
 
@@ -191,7 +191,7 @@ create table public.olist_order_payments
 )
 
 copy public.olist_order_payments
-from '/Users/parmeetsingh/developer/SQL_ecommerceProject/Olist_Dataset/olist_order_payments_dataset.csv'
+from 'D:/Coding/SQL_ecommerceProject/Olist_Dataset/olist_order_payments_dataset.csv'
 WITH (FORMAT csv, HEADER true, delimiter ',', encoding 'UTF8');
 ```
 ### ***Table Olist_product_name_translation***
@@ -214,7 +214,7 @@ portateis_cozinha_e_preparadores_de_alimentos,kitchen_and_food_portables were mi
 
 ```sql
 copy public.olist_product_name_translation
-from '/Users/parmeetsingh/developer/SQL_ecommerceProject/Olist_Dataset/product_category_name_translation.csv'
+from 'D:/Coding/SQL_ecommerceProject/Olist_Dataset/product_category_name_translation.csv'csv'
 WITH (FORMAT csv, HEADER true, delimiter ',', encoding 'UTF8');
 ```
 #### ***Table Olist_products***
@@ -237,7 +237,7 @@ create table public.olist_products
 );
 
 copy public.olist_products
-from '/Users/parmeetsingh/developer/SQL_ecommerceProject/Olist_Dataset/olist_products_dataset.csv'
+from 'D:/Coding/SQL_ecommerceProject/Olist_Dataset/olist_products_dataset.csv'
 WITH (FORMAT csv, HEADER true, delimiter ',', encoding 'UTF8');
 ```
 ### ***Table Olist_products***
@@ -262,7 +262,7 @@ create table public.olist_order_items
 );
 
 copy public.olist_order_items
-from '/Users/parmeetsingh/developer/SQL_ecommerceProject/Olist_Dataset/olist_order_items_dataset.csv'
+from 'D:/Coding/SQL_ecommerceProject/Olist_Dataset/olist_order_items_dataset.csv'
 WITH (FORMAT csv, HEADER true, delimiter ',', encoding 'UTF8');
 ```
 Have created indexes for foreign keys in order to optimize performance by reducing the amount of data to be scanned and also increasing efficiency for join operations
@@ -372,7 +372,7 @@ group by seller_city
 order by number_sellers DESC
 limit 10;
 ```
-tion [Link](https://public.tableau.com/views/Sql_olist_ca4/sql_olist-ca4?:language=en-US&publish=yes&:sid=59EF1F11C9604755A2F66995E7F82922-0:0&:display_count=n&:origin=viz_share_link)
+
 
 ![Customer Distribution by State and City](/Images/sql_olist_ca4.png)
 
